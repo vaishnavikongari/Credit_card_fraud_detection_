@@ -1,0 +1,366 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Selection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('imagess.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            opacity: 0.9; /* Adjust transparency of the background */
+        }
+        .top-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .button-container {
+            text-align: center;
+            z-index: 1;
+        }
+        button {
+            margin: 40px;
+            padding: 15px 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: white; /* Solid white background for the buttons */
+            border: none;
+            border-radius: 5px;
+            color: black; /* Set the text color to black */
+        }
+        .login-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login / Signup Button -->
+    <!-- <div class="top-right">
+        <button class="login-button" onclick="location.href='login.html';">Login / Signup</button>
+    </div> -->
+
+    <!-- Model Selection Buttons -->
+    <!-- <div class="button-container">
+        <button onclick="location.href='http://localhost:8501';">Decision Tree</button>
+        <button onclick="location.href='http://localhost:8502';">XGBoost</button>
+    </div>
+</body>
+</html> --> 
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Selection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('imagess.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            opacity: 0.9;
+        }
+        .top-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .button-container {
+            text-align: center;
+            z-index: 1;
+        }
+        button {
+            margin: 40px;
+            padding: 15px 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            color: black;
+        }
+        .login-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login / Logout Button -->
+    <!-- <div class="top-right">
+        <button id="auth-button" class="login-button"></button>
+    </div> -->
+
+    <!-- Model Selection Buttons -->
+    <!-- <div class="button-container">
+        <button onclick="location.href='http://localhost:8501';">Decision Tree</button>
+        <button onclick="location.href='http://localhost:8502';">XGBoost</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const authButton = document.getElementById("auth-button");
+            const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+
+            if (isLoggedIn) {
+                authButton.textContent = "Logout";
+                authButton.onclick = function () {
+                    localStorage.removeItem("loggedIn");
+                    alert("Logged out successfully!");
+                    location.reload();
+                };
+            } else {
+                authButton.textContent = "Login / Signup";
+                authButton.onclick = function () {
+                    location.href = "login.html";
+                };
+            }
+        });
+    </script>
+</body>
+</html> --> 
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Selection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('imagess.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            opacity: 0.9;
+        }
+        .top-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index:10;
+        }
+        .button-container {
+            text-align: center;
+            z-index: 1;
+        }
+        button {
+            margin: 40px;
+            padding: 15px 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            color: black;
+        }
+        .login-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login / Logout Button -->
+    <!-- <div class="top-right">
+        <button id="auth-button" class="login-button"></button>
+    </div>
+
+    <!-- Model Selection Buttons -->
+    <!-- <div class="button-container">
+        <button id="decisionTreeBtn">Decision Tree</button>
+        <button id="xgboostBtn">XGBoost</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const authButton = document.getElementById("auth-button");
+            const decisionTreeBtn = document.getElementById("decisionTreeBtn");
+            const xgboostBtn = document.getElementById("xgboostBtn");
+
+            const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+
+            // Update login/logout button
+            if (isLoggedIn) {
+                authButton.textContent = "Logout";
+                authButton.onclick = function () {
+                    localStorage.removeItem("loggedIn");
+    alert("Logged out successfully!");
+    window.location.href = "index.html";
+                };
+            } else {
+                authButton.textContent = "Login / Signup";
+                authButton.onclick = function () {
+                    location.href = "login.html";
+                };
+            }
+
+            // Restrict access to model buttons
+            function handleButtonClick(url) {
+                if (isLoggedIn) {
+                    location.href = url;
+                } else {
+                    alert("You must log in first!");
+                    location.href = "login.html";
+                }
+            }
+
+            decisionTreeBtn.onclick = () => handleButtonClick("http://localhost:8501");
+            xgboostBtn.onclick = () => handleButtonClick("http://localhost:8502");
+        });
+    </script>
+</body>
+</html> --> 
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Selection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('imagess.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            opacity: 0.9;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000; 
+            /* background: rgba(255, 255, 255, 0.8);  */
+            border-radius: 5px; 
+        } 
+
+        .button-container {
+            background: transparent;
+        }
+
+        button {
+            margin: 40px;
+            padding: 15px 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .login-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login/Logout Button -->
+    <div class="top-right">
+        <button class="login-button" id="authButton">Login / Signup</button>
+    </div>
+
+    <!-- Model Selection Buttons -->
+    <div class="button-container">
+        <button id="decisionTree">Decision Tree</button>
+        <button id="xgboost">XGBoost</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let authButton = document.getElementById("authButton");
+
+            // Check if user is logged in
+            if (localStorage.getItem("loggedIn") === "true") {
+                authButton.innerText = "Logout";
+                authButton.onclick = function () {
+                    localStorage.removeItem("loggedIn");
+                    alert("Logged out successfully!");
+                    window.location.href = "index.html"; // Reload to reflect logout
+                };
+            } else {
+                authButton.onclick = function () {
+                    window.location.href = "login.html"; // Redirect to login page
+                };
+            }
+
+            function checkAccess(event, url) {
+                if (localStorage.getItem("loggedIn") === "true") {
+                    window.location.href = url;
+                } else {
+                    alert("You must log in first!");
+                    window.location.href = "login.html";
+                }
+            }
+
+            document.getElementById("decisionTree").onclick = function (event) {
+                checkAccess(event, "http://localhost:8501");
+            };
+
+            document.getElementById("xgboost").onclick = function (event) {
+                checkAccess(event, "http://localhost:8502");
+            };
+        });
+    </script>
+</body>
+</html>
+

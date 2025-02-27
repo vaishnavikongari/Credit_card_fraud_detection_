@@ -1,0 +1,356 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('imagess.jpg'); /* Same background as front page */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            opacity: 0.9; /* Adjust transparency of the background */
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="auth-form">
+            <input type="text" id="username" placeholder="Enter Username" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('auth-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === "admin" && password === "password") {  // Example credentials
+                localStorage.setItem('loggedIn', 'true');
+                alert("Login successful!");
+                window.location.href = 'index.html';
+            } else {
+                alert("Invalid credentials. Try again.");
+            }
+        });
+    </script>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('imagess.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            opacity: 0.9;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Enter Username" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "password") {  // Example credentials
+                localStorage.setItem("loggedIn", "true");
+                alert("Login successful!");
+                window.location.href = "index.html";
+            } else {
+                alert("Invalid credentials. Try again.");
+            }
+        });
+    </script>
+</body>
+</html>
+ -->
+
+
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('imagess.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Enter Username" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").onsubmit = function (event) {
+            event.preventDefault(); // Prevent form submission
+            localStorage.setItem("loggedIn", "true");
+            alert("Login successful!");
+            window.location.href = "index.html"; // Redirect to homepage after login
+        };
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('imagess.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .signup-text {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .signup-text a {
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signup-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Enter Username" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p class="signup-text">Don't have an account? <a href="signup.html">Signup</a></p>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").onsubmit = function (event) {
+            event.preventDefault(); // Prevent form submission
+    
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+    
+            let storedUser = JSON.parse(localStorage.getItem("user"));
+    
+            if (storedUser || storedUser.email === username && storedUser.password === password) {
+                localStorage.setItem("loggedIn", "true");
+                alert("Login successful!");
+                window.location.href = "index.html"; // Redirect to homepage after login
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
+        };
+    </script>
+</body>
+</html>
+
+
+
